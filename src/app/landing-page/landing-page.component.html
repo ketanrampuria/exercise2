@@ -1,0 +1,57 @@
+<div class = "font-family">
+<h2 class="blue-color margin-heading display-inline">
+  External Contacts
+</h2>
+  <span *ngIf="!isCollapsed" class="pull-right  margin-heading fa fa-minus-square-o font-size-20" (click)="toggleIsCollapsed()">  Collapse</span> 
+
+  <span *ngIf="isCollapsed" class="pull-right  margin-heading fa fa-plus-square-o font-size-20" (click)="toggleIsCollapsed()">  Expand </span> 
+
+</div>
+<p class="margin-sub-heading font-family">
+    Select the client contacts associated with this order
+</p>
+<div class="margin-heading" [ngClass]="{'collpase': isCollapsed, 'Expand': !isCollapsed}">
+<table class="font-family">
+  <tr class="blue-color">
+      <th></th>
+      <th>Type</th>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Phone</th>
+      <th>Ext</th>
+      <th>Fax</th>
+      <th>Email</th>
+  </tr>
+  <tr *ngFor="let data of tableData; let rowIndex = index">
+
+      <td *ngIf = '!((rowIndex === tableData.length - 1) && addFlag)'><input type="checkbox" (click)="getIndex(rowIndex)"></td>
+      <td *ngIf = '!((rowIndex === tableData.length - 1) && addFlag)'> {{data.type}}</td>
+      <td *ngIf = '!((rowIndex === tableData.length - 1) && addFlag)'>{{data.Name}}</td>
+      <td *ngIf = '!((rowIndex === tableData.length - 1) && addFlag)'>{{data.Title}}</td>
+      <td *ngIf = '!((rowIndex === tableData.length - 1) && addFlag)'>{{data.Phone}}</td>
+      <td *ngIf = '!((rowIndex === tableData.length - 1) && addFlag)'>{{data.Ext}}</td>
+      <td *ngIf = '!((rowIndex === tableData.length - 1) && addFlag)'>{{data.Fax}}</td>
+      <td *ngIf = '!((rowIndex === tableData.length - 1) && addFlag)'>{{data.Email}}</td>
+
+        <td *ngIf = '(rowIndex === tableData.length - 1) && addFlag'></td>
+        <td *ngIf = '(rowIndex === tableData.length - 1) && addFlag'><input [(ngModel)]="data.type" type="text"></td>
+        <td *ngIf = '(rowIndex === tableData.length - 1) && addFlag'><input [(ngModel)]="data.Name" type="text"></td>
+        <td *ngIf = '(rowIndex === tableData.length - 1) && addFlag'><input [(ngModel)]="data.Title" type="text"></td>
+        <td *ngIf = '(rowIndex === tableData.length - 1) && addFlag'><input [(ngModel)]="data.Phone" type="text"></td>
+        <td *ngIf = '(rowIndex === tableData.length - 1) && addFlag' style="width: 5%"><input [(ngModel)]="data.Ext" type="text" style="width: 100%"></td>
+        <td *ngIf = '(rowIndex === tableData.length - 1) && addFlag'><input [(ngModel)]="data.Fax" type="text"></td>
+        <td *ngIf = '(rowIndex === tableData.length - 1) && addFlag'><input [(ngModel)]="data.Email" type="text"></td>
+    
+
+
+    
+  </tr>
+  
+</table>
+</div>
+<div class="font-family margin-heading" [ngClass]="{'collpase': isCollapsed, 'Expand': !isCollapsed}">
+<button class="btn btn-primary" type="button" (click)="addRows()" *ngIf="!addFlag">Add Row</button> &nbsp;
+<button class="btn btn-success" type="button" (click)="saveRows()"  *ngIf="addFlag">Save</button> &nbsp;
+<button class="btn btn-danger" type="button" (click)="deleteSelectedRows()" [disabled]="tableDataIndex.length == 0">Delete Row(s)</button>
+</div>
+

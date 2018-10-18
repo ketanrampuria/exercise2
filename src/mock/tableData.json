@@ -1,0 +1,42 @@
+[
+    {
+    "type":"Executive",
+    "Name":"Ann Brown",
+    "Title":"CEO",
+    "Phone":"(512)456-5555",
+    "Ext.":"",
+    "Fax":"(512)456-5555",
+    "Email":"Executive"},
+    {
+    "type":"Inmar AR",
+    "Name":"Mary Smith",
+    "Title":"Lorem Ipsum",
+    "Phone":"(512)456-5555",
+    "Ext.":"",
+    "Fax":"(512)456-5555",
+    "Email":"Inmar AR"},
+    {
+    "type":"Executive",
+    "Name":"John Doe",
+    "Title":"Dolor Sit",
+    "Phone":"(512)456-5555",
+    "Ext.":"",
+    "Fax":"(512)456-5555",
+    "Email":"Executive"},
+    {
+    "type":"Daily",
+    "Name":"John Doe",
+    "Title":"Dolor sit amet",
+    "Phone":"(512)456-5555",
+    "Ext.":"",
+    "Fax":"(512)456-5555",
+    "Email":"Daily"},
+    {
+    "type":"Other",
+    "Name":"John Doe",
+    "Title":"Lorem Ipsum",
+    "Phone":"(512)456-5555",
+    "Ext.":"",
+    "Fax":"(512)456-5555",
+    "Email":"Other"}
+]

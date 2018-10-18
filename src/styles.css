@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+.margin-heading{
+    margin: 30px 30px 5px 30px;
+}
+
+.margin-sub-heading{
+    margin: 5px 30px 30px 30px;
+}
+
+.btn-sm {
+    padding: 0px 5px 5px 5px;
+    font-size: 10px;
+    line-height: 1;
+    border-radius: 3px;
+}
+
+.blue-color{
+    color: #00CCCC;
+}
+
+.align-right{
+    text-align: right;
+}
+.display-inline{
+    display: inline-block;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.collpase{
+    overflow: hidden;
+    height: 0;
+}
+
+.Expand{
+    overflow: hidden;
+    height: auto;
+}
+
+.font-size-20{
+    font-size: 20px;
+}
+
+.font-family{
+    font-family: monospace;
+}
